@@ -15,6 +15,7 @@ function Column(id, name) {
 		
 		// PODPINANIE ODPOWIEDNICH ZDARZEŃ POD WĘZŁY
 		columnDelete.click(function() {
+            event.preventDefault(); //fixed
 			self.deleteColumn();
 		});
 		

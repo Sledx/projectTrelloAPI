@@ -27,8 +27,8 @@ $(function(){
     element: $('#board .column-container')
   };
 
-  $('.create-column')
-  .click(function(){
+  $('.create-column').click(function(){
+    event.preventDefault();
     board.createColumn(new Column(prompt('Wpisz nazwę kolumny')));
   });
 
@@ -50,6 +50,7 @@ $(function(){
 
       // PODPINANIE ODPOWIEDNICH ZDARZEŃ POD WĘZŁY
       columnDelete.click(function() {
+		event.preventDefault();
         self.deleteColumn();
       });
       columnAddCard.click(function(event) {
@@ -87,6 +88,7 @@ $(function(){
       var cardDeleteBtn = $('<button class="btn-delete">x</button>');
       var cardDescription = $('<p class="card-description"></p>');
       cardDeleteBtn.click(function(){
+        event.preventDefault();
         self.removeCard();
       });
       card.append(cardDeleteBtn);
