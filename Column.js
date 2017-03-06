@@ -15,13 +15,12 @@ function Column(id, name) {
 		
 		// PODPINANIE ODPOWIEDNICH ZDARZEŃ POD WĘZŁY
 		columnDelete.click(function() {
-            event.preventDefault(); //fixed
 			self.deleteColumn();
 		});
 		
 		columnAddCard.click(function(event) {
+        	event.preventDefault();
             var cardName = prompt("Wpisz nazwę karty");
-			event.preventDefault();
             $.ajax({
                 url: baseUrl + '/card',
                 method: 'POST',

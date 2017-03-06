@@ -28,7 +28,6 @@ $(function(){
   };
 
   $('.create-column').click(function(){
-    event.preventDefault();
     board.createColumn(new Column(prompt('Wpisz nazwę kolumny')));
   });
 
@@ -50,7 +49,6 @@ $(function(){
 
       // PODPINANIE ODPOWIEDNICH ZDARZEŃ POD WĘZŁY
       columnDelete.click(function() {
-		event.preventDefault();
         self.deleteColumn();
       });
       columnAddCard.click(function(event) {

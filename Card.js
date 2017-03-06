@@ -12,7 +12,6 @@ function Card(id, name) {
             cardDescription = $('<p class="card-description"></p>');
 		
 		cardDeleteBtn.click(function(){
-			event.preventDefault();
 			self.removeCard();
 		});
 		
